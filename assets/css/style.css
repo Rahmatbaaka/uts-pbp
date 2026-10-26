@@ -1,0 +1,164 @@
+/* Color Palette & Custom Fonts */
+:root {
+  --navy-darker: #050C1A;
+  --navy-deep: #0A192F;
+  --navy-medium: #152B4E;
+  --blue-accent: #7DD3FC;
+  --silver-accent: #E2E8F0;
+  
+  --bg-light-ice: #EBF3FA;
+  --bg-white: #FFFFFF;
+  --text-dark: #0F172A;
+  
+  --font-wedding: 'Great Vibes', cursive;
+  --font-pinyon: 'Pinyon Script', cursive;
+  --font-heading: 'Cormorant Garamond', serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--text-dark);
+  background-color: var(--bg-light-ice);
+}
+
+/* Lock scroll halaman saat cover awal masih aktif */
+body.locked { overflow: hidden; }
+
+/* Custom Typography Helpers */
+.font-wedding { font-family: var(--font-wedding); }
+.font-pinyon { font-family: var(--font-pinyon); }
+.tracking-widest { letter-spacing: 0.15em; }
+
+/* Fullscreen Hero Cover Overlay */
+#cover-section {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  z-index: 99999;
+  background: radial-gradient(circle at center, #152B4E 0%, #0A192F 60%, #050C1A 100%);
+  transition: transform 0.8s cubic-bezier(0.77, 0, 0.175, 1), opacity 0.8s ease;
+}
+
+/* Slide-out animation saat tombol Buka Undangan diklik */
+#cover-section.cover-hidden {
+  transform: translateY(-100%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.cover-card {
+  width: 90%;
+  max-width: 450px;
+  background: rgba(10, 25, 47, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--blue-accent);
+  border-radius: 28px;
+  box-shadow: 0 0 30px rgba(125, 211, 252, 0.2);
+}
+
+.cover-seal {
+  width: 65px; height: 65px;
+  border-radius: 50%;
+  border: 2px solid var(--blue-accent);
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  color: var(--blue-accent);
+  background: rgba(125, 211, 252, 0.1);
+}
+
+.backdrop-blur {
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+/* Section Backgrounds & Transitions */
+.section-light { background-color: var(--bg-light-ice); color: var(--text-dark); }
+.section-white { background-color: var(--bg-white); color: var(--text-dark); }
+.section-dark { background-color: var(--navy-deep); color: #FFFFFF; }
+
+.svg-divider {
+  width: 100%;
+  line-height: 0;
+  direction: ltr;
+}
+
+.svg-divider svg {
+  display: block;
+  width: 100%;
+  height: 50px;
+}
+
+.fill-dark { fill: var(--navy-deep); }
+.fill-light { fill: var(--bg-light-ice); }
+.fill-white { fill: var(--bg-white); }
+
+/* Card Hover Animation */
+.hover-lift-card {
+  transition: transform 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.35s ease;
+}
+
+.hover-lift-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 32px rgba(10, 25, 47, 0.18) !important;
+}
+
+.card-light-style {
+  background-color: #FFFFFF;
+  border: 1px solid rgba(125, 211, 252, 0.4);
+  border-top: 4px solid var(--navy-deep) !important;
+}
+
+.bank-card-dark {
+  background: linear-gradient(135deg, #0A192F 0%, #152B4E 100%);
+  border: 1px solid rgba(125, 211, 252, 0.4);
+}
+
+/* Floating Music Control */
+.btn-music-float {
+  position: fixed; bottom: 20px; right: 20px; z-index: 9999;
+  background-color: var(--navy-deep);
+  color: var(--blue-accent);
+  border: 1px solid var(--blue-accent);
+  border-radius: 50px; padding: 8px 16px;
+}
+
+/* Custom Buttons & Hover Animations */
+.btn-sky {
+  background-color: var(--blue-accent) !important;
+  color: #050C1A !important;
+  font-weight: 600;
+  border-radius: 50px;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.btn-sky:hover {
+  background-color: #38bdf8 !important;
+  color: #050C1A !important;
+  box-shadow: 0 6px 20px rgba(125, 211, 252, 0.4);
+  transform: translateY(-3px);
+}
+
+.btn-light-accent {
+  background-color: rgba(125, 211, 252, 0.15) !important;
+  color: var(--blue-accent) !important;
+  border: 1px solid var(--blue-accent) !important;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+}
+
+.btn-light-accent:hover,
+.btn-light-accent:active,
+.btn-light-accent:focus {
+  background-color: var(--blue-accent) !important;
+  color: #050C1A !important;
+  transform: translateY(-2px);
+}
+
+@keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+.spin { display: inline-block; animation: spin 3s linear infinite; }

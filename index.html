@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Undangan Pernikahan - Rahmat & Rani</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Great+Vibes&family=Pinyon+Script&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="locked">
+
+  <!-- SECTION 1: COVER -->
+  <div id="cover-section" class="d-flex align-items-center justify-content-center text-center p-3">
+    <div class="cover-card p-4 p-md-5 text-white position-relative shadow-lg">
+      <div class="cover-seal mb-3 mx-auto">
+        <span>R & R</span>
+      </div>
+      <p class="small text-uppercase tracking-widest text-sky mb-1">The Wedding Invitation</p>
+      <h1 class="font-wedding display-2 my-2 text-white">Rahmat & Rani</h1>
+      <p class="small text-uppercase tracking-wide opacity-75 mb-4">05 • 02 • 2033</p>
+
+      <div class="tamu-box p-3 rounded-4 backdrop-blur mb-4">
+        <p class="small text-uppercase mb-1 opacity-75">Kepada Yth. Bapak/Ibu/Saudara/i:</p>
+        <h3 id="nama-tamu" class="fw-semibold mb-2 text-sky">Tamu Terhormat</h3>
+        <p class="small opacity-75 mb-0">Kami mengundang Anda untuk merayakan momen suci pernikahan kami.</p>
+      </div>
+
+      <button id="btn-buka" class="btn btn-sky btn-lg px-4 shadow" onclick="bukaUndangan()">
+        <i class="bi bi-envelope-open-fill me-2"></i>Buka Undangan
+      </button>
+    </div>
+  </div>
+
+  <button id="btn-music" class="btn btn-music-float d-none" onclick="toggleMusik()">
+    <i class="bi bi-disc-fill spin me-1"></i> Putar Musik
+  </button>
+
+  <main id="main-content">
+
+    <!-- SECTION 2: AYAT SUCI -->
+    <section id="ayat" class="py-5 section-light text-center">
+      <div class="container py-4">
+        <div class="row justify-content-center">
+          <div class="col-md-8">
+            <i class="bi bi-quote fs-1 text-navy"></i>
+            <h2 class="font-pinyon display-5 text-navy mb-3">QS. Ar-Rum: 21</h2>
+            <p class="fst-italic fs-5 text-navy my-3">
+              "Dan di antara tanda-tanda (kebesaran-Nya) ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa kasih dan sayang."
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Transisi Kurva ke Section Gelap -->
+    <div class="svg-divider">
+      <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M0,0 C150,90 350,-40 500,60 C650,160 900,10 1200,40 L1200,120 L0,120 Z" class="fill-dark"></path>
+      </svg>
+    </div>
+
+    <!-- SECTION 3: DETAIL MEMPELAI -->
+    <section id="mempelai" class="py-5 section-dark">
+      <div class="container py-4">
+        <div class="text-center mb-5">
+          <h2 class="font-wedding display-3 text-sky">Mempelai</h2>
+          <p class="text-white-50">Mengarungi bahtera rumah tangga bersama dalam ikatan suci:</p>
+        </div>
+        
+        <div class="row align-items-center g-4 mb-5">
+          <div class="col-md-4 text-center text-md-end order-2 order-md-1">
+            <h3 class="font-wedding display-4 text-white mb-1">Rahmat, S.Kom</h3>
+            <p class="fw-semibold text-sky mb-2">Putra Ketiga</p>
+            <p class="text-white-50 small">Bapak Raja <br>& Ibu Putri</p>
+          </div>
+          <div class="col-md-4 text-center order-1 order-md-2">
+            <img src="assets/images/mempelai-pria.jpg" alt="Mempelai Pria" class="img-fluid rounded-circle profile-img border-accent shadow">
+          </div>
+          <div class="col-md-4 d-none d-md-block order-3"></div>
+        </div>
+
+        <div class="text-center my-4">
+          <span class="font-pinyon display-2 text-sky">&</span>
+        </div>
+
+        <div class="row align-items-center g-4">
+          <div class="col-md-4 d-none d-md-block"></div>
+          <div class="col-md-4 text-center">
+            <img src="assets/images/mempelai-wanita.png" alt="Mempelai Wanita" class="img-fluid rounded-circle profile-img border-accent shadow">
+          </div>
+          <div class="col-md-4 text-center text-md-start">
+            <h3 class="font-wedding display-4 text-white mb-1">Rani , S.pgsd</h3>
+            <p class="fw-semibold text-sky mb-2">Putri Pertama</p>
+            <p class="text-white-50 small">Bapak Alieff<br>& Ibu Devina</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Transisi Kurva Kembali ke Section Terang -->
+    <div class="svg-divider bg-dark">
+      <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M0,0 C300,90 600,-40 1200,60 L1200,120 L0,120 Z" class="fill-white"></path>
+      </svg>
+    </div>
+
+    <!-- SECTION 4: WAKTU & LOKASI ACARA -->
+    <section id="acara" class="py-5 section-white">
+      <div class="container py-4">
+        <div class="text-center mb-4">
+          <small class="text-uppercase tracking-widest text-navy">Date & Venue</small>
+          <h2 class="font-wedding display-4 text-navy">Waktu & Lokasi Acara</h2>
+        </div>
+
+        <div class="row justify-content-center mb-5">
+          <div class="col-lg-8">
+            <div class="row text-center g-2 g-md-3">
+              <div class="col-3">
+                <div class="p-3 rounded-4 shadow-sm bg-light-ice border border-accent">
+                  <h2 id="hari" class="fw-bold text-navy mb-0">0</h2>
+                  <small class="text-muted text-uppercase">Hari</small>
+                </div>
+              </div>
+              <div class="col-3">
+                <div class="p-3 rounded-4 shadow-sm bg-light-ice border border-accent">
+                  <h2 id="jam" class="fw-bold text-navy mb-0">0</h2>
+                  <small class="text-muted text-uppercase">Jam</small>
+                </div>
+              </div>
+              <div class="col-3">
+                <div class="p-3 rounded-4 shadow-sm bg-light-ice border border-accent">
+                  <h2 id="menit" class="fw-bold text-navy mb-0">0</h2>
+                  <small class="text-muted text-uppercase">Menit</small>
+                </div>
+              </div>
+              <div class="col-3">
+                <div class="p-3 rounded-4 shadow-sm bg-light-ice border border-accent">
+                  <h2 id="detik" class="fw-bold text-navy mb-0">0</h2>
+                  <small class="text-muted text-uppercase">Detik</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row g-4 justify-content-center">
+          <div class="col-md-6 col-lg-5">
+            <div class="card h-100 border-0 shadow-sm rounded-4 text-center p-4 card-light-style hover-lift-card">
+              <div class="card-body">
+                <i class="bi bi-feather fs-1 text-navy mb-2 d-block"></i>
+                <h3 class="font-wedding display-5 text-navy">Akad Nikah</h3>
+                <span class="badge bg-navy px-3 py-2 rounded-pill my-2">Pukul 08.00 - 10.00 WIB</span>
+                <p class="fw-semibold text-navy mt-2 mb-1">Sabtu, 05 Februari 2033</p>
+                <hr class="my-3">
+                <p class="fw-bold mb-1">Masjid Agung Surabaya</p>
+                <p class="text-muted small mb-4">Jl. Masjid Agung No. 1, Gayungan, Surabaya</p>
+                <a href="https://maps.app.goo.gl/ZnKhixiZ71rPoV9T8" target="_blank" class="btn btn-dark btn-sm rounded-pill">
+                  <i class="bi bi-geo-alt-fill me-1"></i>Lihat Google Maps
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-5">
+            <div class="card h-100 border-0 shadow-sm rounded-4 text-center p-4 card-light-style hover-lift-card">
+              <div class="card-body">
+                <i class="bi bi-cup-hot-fill fs-1 text-navy mb-2 d-block"></i>
+                <h3 class="font-wedding display-5 text-navy">Resepsi Pernikahan</h3>
+                <span class="badge bg-navy px-3 py-2 rounded-pill my-2">Pukul 11.00 - 14.00 WIB</span>
+                <p class="fw-semibold text-navy mt-2 mb-1">Minggu, 06 Februari 2033</p>
+                <hr class="my-3">
+                <p class="fw-bold mb-1">Gedung Geraha Adi</p>
+                <p class="text-muted small mb-4">Jl. Balas Klumprik No. 156, Balas Klumprik, Surabaya</p>
+                <a href="https://maps.app.goo.gl/x2ocYLfvXkDMXwhE7" target="_blank" class="btn btn-dark btn-sm rounded-pill">
+                  <i class="bi bi-geo-alt-fill me-1"></i>Lihat Google Maps
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Transisi Kurva ke Section Hadiah Gelap -->
+    <div class="svg-divider">
+      <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M0,0 C150,90 350,-40 500,60 C650,160 900,10 1200,40 L1200,120 L0,120 Z" class="fill-dark"></path>
+      </svg>
+    </div>
+
+    <!-- SECTION 5: TANDA KASIH HADIAH -->
+    <section id="hadiah" class="py-5 section-dark">
+      <div class="container py-4">
+        <div class="row justify-content-center text-center">
+          <div class="col-md-8 col-lg-7">
+            <small class="text-uppercase tracking-widest text-sky">Wedding Gift</small>
+            <h2 class="font-wedding display-4 text-sky mb-3">Tanda Kasih Digital</h2>
+            <p class="text-white-50 small mb-4">
+              Kehadiran dan doa restu Anda merupakan hadiah terindah bagi kami. Namun jika Anda berkenan memberikan tanda kasih secara digital, Anda dapat melalui rekening di bawah ini:
+            </p>
+
+            <div class="row g-4 justify-content-center">
+              <div class="col-sm-6">
+                <div class="bank-card-dark p-4 rounded-4 shadow text-start hover-lift-card">
+                  <div class="d-flex justify-content-between align-items-center mb-2">
+                    <span class="small fw-bold text-uppercase text-sky">Bank BCA</span>
+                    <i class="bi bi-credit-card-2-front fs-4 text-sky"></i>
+                  </div>
+                  <div class="fs-4 fw-mono tracking-wider text-white mb-1">1234 5678 910</div>
+                  <div class="small text-white-50 mb-3">a.n Rahmat </div>
+                  <button class="btn btn-sm btn-light-accent w-100" onclick="salinBank('12345678910', 'BCA')">
+                    <i class="bi bi-clipboard me-1"></i>Salin Nomor Rekening
+                  </button>
+                </div>
+              </div>
+
+              <div class="col-sm-6">
+                <div class="bank-card-dark p-4 rounded-4 shadow text-start hover-lift-card">
+                  <div class="d-flex justify-content-between align-items-center mb-2">
+                    <span class="small fw-bold text-uppercase text-sky">Bank Mandiri</span>
+                    <i class="bi bi-credit-card-2-front fs-4 text-sky"></i>
+                  </div>
+                  <div class="fs-4 fw-mono tracking-wider text-white mb-1">019 8765 4321</div>
+                  <div class="small text-white-50 mb-3">a.n Rani </div>
+                  <button class="btn btn-sm btn-light-accent w-100" onclick="salinBank('01987654321', 'Mandiri')">
+                    <i class="bi bi-clipboard me-1"></i>Salin Nomor Rekening
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Transisi Kurva Kembali ke Section RSVP Terang -->
+    <div class="svg-divider bg-dark">
+      <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M0,0 C300,90 600,-40 1200,60 L1200,120 L0,120 Z" class="fill-light"></path>
+      </svg>
+    </div>
+
+    <!-- SECTION 6: RSVP & UCAPAN -->
+    <section id="rsvp" class="py-5 section-light">
+      <div class="container py-4">
+        <div class="row justify-content-center">
+          <div class="col-md-8 col-lg-7">
+            <div class="card border-0 shadow rounded-4 p-4 hover-lift-card card-light-style">
+              <div class="card-body">
+                <div class="text-center mb-4">
+                  <i class="bi bi-envelope-heart fs-1 text-navy d-block mb-1"></i>
+                  <h2 class="font-wedding display-4 text-navy mb-1">Konfirmasi Kehadiran</h2>
+                  <p class="text-muted small">Isi formulir untuk mengonfirmasi kehadiran serta memberikan ucapan doa.</p>
+                </div>
+
+                <form id="form-rsvp">
+                  <div class="mb-3">
+                    <label for="nama" class="form-label small fw-semibold text-navy">
+                      <i class="bi bi-person-fill me-1"></i>Nama Lengkap
+                    </label>
+                    <input type="text" class="form-control custom-input" id="nama" placeholder="Masukkan nama Anda" required>
+                  </div>
+
+                  <div class="row g-3 mb-3">
+                    <div class="col-sm-6">
+                      <label for="kehadiran" class="form-label small fw-semibold text-navy">
+                        <i class="bi bi-check-circle-fill me-1"></i>Status Kehadiran
+                      </label>
+                      <select class="form-select custom-input" id="kehadiran" required>
+                        <option value="" selected disabled>Pilih Status</option>
+                        <option value="Hadir">Hadir</option>
+                        <option value="Tidak Hadir">Tidak Hadir</option>
+                      </select>
+                    </div>
+
+                    <div class="col-sm-6">
+                      <label for="jumlah" class="form-label small fw-semibold text-navy">
+                        <i class="bi bi-people-fill me-1"></i>Jumlah Tamu
+                      </label>
+                      <select class="form-select custom-input" id="jumlah" required>
+                        <option value="1">1 Orang</option>
+                        <option value="2">2 Orang</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="mb-4">
+                    <div class="d-flex justify-content-between align-items-center mb-1">
+                      <label for="ucapan" class="form-label small fw-semibold text-navy mb-0">
+                        <i class="bi bi-chat-quote-fill me-1"></i>Ucapan & Doa
+                      </label>
+                      <span id="char-count" class="small text-muted">0/300</span>
+                    </div>
+                    <textarea class="form-control custom-input" id="ucapan" rows="3" maxlength="300" placeholder="Tuliskan harapan dan doa Anda..." required></textarea>
+                  </div>
+
+                  <button type="submit" class="btn btn-dark rounded-pill w-100 py-2 shadow-sm">
+                    <i class="bi bi-send-fill me-2"></i>Kirim Ucapan
+                  </button>
+                </form>
+
+                <div class="mt-5 pt-3 border-top">
+                  <h5 class="fw-bold text-navy mb-3">
+                    <i class="bi bi-chat-dots me-2"></i>Ucapan Tamu Undangan
+                  </h5>
+                  <div id="daftar-ucapan" class="ucapan-list pe-1" style="max-height: 300px; overflow-y: auto;"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 7: FOOTER -->
+    <footer class="py-5 section-dark text-white text-center">
+      <div class="container">
+        <div class="footer-monogram text-sky mb-2">R • J</div>
+        <p class="fst-italic text-sky max-w-600 mx-auto fs-5 mb-4">
+          "Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Anda berkenan hadir."
+        </p>
+        <hr class="border-secondary opacity-25 my-4">
+        <p class="small opacity-75 mb-0">
+          © 2026 The Wedding of Rahmat & Rani • Design by EO dayat
+        </p>
+      </div>
+    </footer>
+
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
